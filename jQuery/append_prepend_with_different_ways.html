@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <a href="javascript:void(0);" onclick="AppendItemsToList();">Append items</a>   
+    <ol id="olTestList2"></ol>
+
+    <script type="text/javascript">
+    function AppendItemsToList()
+    {
+        var item1 = $("<li></li>").text("Item 1");
+        var item2 = "<li>Item 2</li>";
+        var item3 = document.createElement("li");
+        item3.innerHTML = "Item 3";
+        
+        $("#olTestList2").append(item1, item2, item3);
+    }
+    </script>
+</body>
+</html>

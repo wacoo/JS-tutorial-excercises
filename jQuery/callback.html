@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+
+    <script type="text/javascript">
+        $(function()
+        {
+            $("p").text(function(index, oldText) {
+                return "Existing text: " + oldText + ". New text: A dynamically set text (#" + index + ")";
+            });
+        });
+    </script>
+</body>
+</html>
